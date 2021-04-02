@@ -1,0 +1,41 @@
+<!-- css specificity example -->
+
+<style>
+    p {
+        color: gray;
+    }
+
+    #red p {
+        color: red;
+    }
+
+    .blue {
+        color: blue;
+    }
+
+    #red .blue {
+        color: magenta;
+    }
+
+    .green p {
+        color: lightgreen;
+    }
+
+    div.green p.blue {
+        color: cyan;
+    } 
+</style>
+
+
+
+<div id="red" class="green">
+    <p class="blue">Hello world!</p>
+</div>
+
+
+
+<!-- 
+    Type selectors (e.g., h1) and pseudo-elements (e.g., ::before).
+    Class selectors (e.g., .example), attributes selectors (e.g., [type="radio"]) and pseudo-classes (e.g., :hover).
+    ID selectors (e.g., #example). 
+-->
