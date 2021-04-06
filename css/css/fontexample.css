@@ -1,0 +1,18 @@
+.text {
+	font-size: 12px;
+}
+ 
+p {
+    font-family: 'Helvetica';
+    font-size: 1.5rem;
+}
+
+li {
+    display: inline-block;
+    width: 100px;
+    /* border: 5px solid rebeccapurple; */
+    /* padding: 2em; */
+    padding:1em 2em 2em 1em;
+    /* padding-bottom:2em; */
+    margin: 2em;
+}

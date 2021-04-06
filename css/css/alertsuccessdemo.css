@@ -1,0 +1,15 @@
+.alert.success {
+  color: yellow;
+}
+
+.alert .success {
+  color: yellow;
+}
+
+.alert, .success {
+  color: yellow
+}
+
+.alert--.success {
+  color: yellow
+}
