@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* Example 1 */ 
+.card {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+img {
+  width: 300px;
+}
+
+/* Example 2 */
+
+/* .flex-pool {
+  display: flex;
+  flex-wrap: wrap;
+
+} */
+
+/* Example 3 */
+
+.sidebyside {
+  display:flex;
+}
+.column {
+  flex-basis: 50%;
+  border: 1px solid black;
+}
+
+.flex-pool {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+
+ /* inner pools */
+ 
+.flex-pool > div {
+  display: flex;
+  justify-content: space-around;
+}
