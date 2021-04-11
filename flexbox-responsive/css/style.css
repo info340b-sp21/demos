@@ -1,47 +1,26 @@
 * {
-    box-sizing: border-box;
-  }
-  
- 
-/* Example 1 */
-  .card {
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-bottom: 1em;
-  }
-  
-  img {
-    width: 300px;
+  box-sizing: border-box;
+}
+
+/* on devices 768px OR WIDER */
+@media (min-width: 768px)
+{
+  .row { /* row is a flexbox container */
+      display: flex;
+      flex-wrap: wrap; /* wrap extra items to the next "line" */
   }
 
-  /* Example 2 */
+  .column  { /* column is a flexbox item */
+      background-color: orange;
+      border: 5px solid rebeccapurple;
 
-  /* .flex-pool {
-    display: flex;
-    flex-wrap: wrap;
-  
-  } */
-
-  /* Example 3 */
-
-  .sidebyside {
-    display:flex;
+      flex-basis: 50%; /* columns take up 50% of parent by default */
+      /* flex-grow: 1; */
   }
+}
+
+@media (min-width: 1200px) {
   .column {
-    flex-basis: 50%;
-    border: 1px solid black;
+      flex-basis: 33%; /* columns are automatically sized based on content */
   }
-  
-  .flex-pool {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  
-  
-   /* inner pools */
-   
-  .flex-pool > div {
-    display: flex;
-    justify-content: space-around;
-  }
+}
