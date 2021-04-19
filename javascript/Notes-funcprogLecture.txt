@@ -1,0 +1,307 @@
+poll everywhere
+slides
+get lecture repo
+
+terminal to the lecture directory
+live-server
+
+bring up the developer tools in chrome, console
+---------------------------------
+Slide 2
+PLAN FOR TODAY
+
+Feedback from you guys on the course
+Functional programming lecture
+
+----------------------------
+Slide 3
+THE COURSE SO FAR
+
+What we've done so far
+
+--------------------------
+
+Slide 4
+Review questions
+
+-------------------------
+
+SLIDE 5
+QUESTIONS
+
+Issues from other class session:
+- Will we be learning how to use an API to get real time info for our website? Yes
+- How much will we be using jQuery? We'll discuss it, but it's not really necessary anymore
+- Can you discuss efficiency of loops? 
+We don't care as much about optimizing for efficiency in this class when weighed against readability and maintainability. Saving a nono-second isn't worth it.
+
+-----------------------------
+Slide 5
+Do you recognize and understand how we declare functions and call them?
+
+
+-----------------------------
+
+SLIDE 6
+Functions
+
+Recall this is how we declare functions...
+
+
+
+Slide 7
+Functions are values
+A function is like any other value you declare. 
+
+------------------------------------
+Slide 8
+FUNCTIONS ARE VALUES
+
+It's just like an array, number, string... higher order functions
+
+
+You can use a function anywhere you can use an array
+For arrays the '[]' is the super power
+For functions the '()' is the super power
+
+Example - we create an array and can assign that array to another variable
+
+Side by side with an array, and its essentially the same process but with a function.
+
+We can declare a function. If we look at the data type (typeof) and it's a function.
+
+We are creating a data value when declaring functions.
+
+It's like a function is a recipe
+
+So you can pass around recipes
+
+Think about what's happening under the covers in a computer program, when it starts, variables, constants, code all get loaded into memory.
+
+We access variables because there is a specific address in memory that we can access and manipulate.
+Similarly functions also are stored in memory at a specific location. So we can also access these code segments with an address too. 
+
+
+-------------------------------------
+Slide 9
+Anonomous Variables 
+
+literal versus anonymous
+
+Passing a literal.
+If we don't include a name, it's an anonmous function.
+
+Example of an array first being passed by variable, then an anonomous (literal) array being passed to console.log
+
+Underneath the same example with first a function "sayHello()" being created anonomously, then showing how an anonmous function can be assigned.
+
+We create this anonymous function by just leaving off the name
+
+The first example is not really valid. There's no way to access that function because there's no name. It'd be the same as writing 
+[1,2,3]; as a line of code.
+
+
+But we can declare a variable and assign it with an equal sign to the anonymous function.
+
+We will use anonymous functions alot.
+
+They are almost identical, but there is one difference when declaring functions vs assigning an anonmous function to a variable. 
+
+Hoisting.
+Declared functions get hoisted before code progresses. Assigned functions don't until they are assigned. So you must assign before calling otherwise the runtime environment won't know what the function is and will error out.
+
+Use the example from the lecture notes
+
+It's possible to call a named function even if it's declared later in the file because of hoisting. YOu can't do that with anonymous functions that are then assigned
+
+Best practice use named functions when you can.
+
+Walk through the slide. Show how you can syntactically do the same thing with functions as you do with arrays.
+
+
+-----------------------------------------
+
+Slide 10
+FUNCTIONS ARE VALUES
+
+Functions can be assigned to properties in Objects
+
+If you apply static keyword with any method, it is known as static method. A static method belongs to the class rather than object of a class. 
+A static method invoked without the need for creating an instance of a class. static method can access static data member and can change the value of it.
+
+non-static here means, functions that belong to objects
+
+------------------------------------------
+
+Slide 11
+Functions are Objects
+
+Which means they can be passed as parameters to other functions
+
+Side by side - on left shows passing in an array
+on right shows passing a function
+
+Things of note:
+- Between the '()' note that we still don't declare that the paramter is an array or function in javascript. the code within the function determines the type
+
+-****** More Commonly, we an anonomous function in javascript. *****
+
+This is how we end up with the }); 
+
+the '}' is the closing bracket to the anonmous function. the ')' is the parenthesis for the calling function. then the ;
+
+
+So you can paste the whole function definition that you are passing in between the '(' and ')', and then remove the function name to make it anonymous.
+
+We'll be using this in a number of places...
+
+- when looping, we pass the function we want to be run through each iteration\
+- when doing interactive programing, where we have listeners and we register a callback function that will run when a button is pushed for example
+---------------------------------------
+
+Slide 12
+Passing vs calling
+
+Don't put the '()' when passing function as a parameters
+
+This will instead pass the value of the function rather than the function. You'll get an error if the function expects a function.
+
+YOu want to pass the recipe, not the cake. So don't put parens when its expecting a function
+
+-------------------------------------
+
+Slide 13
+Callback Functions
+We call these things "callback" functions. 
+
+Functions that we are going to call back later. We provide the recipe (the function).
+
+Paste the sample code into visual code
+
+Walk through the examples. Maybe show how you can have the two functions passed in as anonymous functions
+
+remember to delete the function name when you paste in the anonymous code
+
+Also remember that if you pass in the function with () that you won't be passing in the recipe, you are calling the function. 
+
+Maybe show this in the code by adding '()' in one of the functions in the last line 
+
+like this -> doTogether(patHead(), rubBelly);
+
+So where would we use this idea of a callback?
+
+In array iteration --> They expect a callback function
+-------------------------------------
+
+Slide 14
+Array Iteration
+
+Built in functions in javascript that we can use. foreach, map, reduce, filter
+
+Foreach function - it expects you to provide a callback function as an argument.
+
+Execute this function on every single element in the array.
+
+array.forEach(callback)
+
+For each element. Do this function.
+
+In the example, it takes the a and passes passes it to the function, The element b to the function, then element c to the function.
+
+More common to use an anonymous callback in the ForEach()
+
+On es6 you can use:
+
+for (item of array){
+    console.log(item);
+}
+
+This doesn't work as far back for old browsers while forEach does
+
+of course that gets fixed in react where things get transpiled
+
+But the recommendation here is to use forEach()
+
+
+
+
+--------------------------------------
+
+Slide 15
+Mapping
+
+First slide shows how to do it manually
+
+The second slide shows how the map function does it in one line of code
+
+Another cool one is "mapping"\
+
+It takes in one array and we will transform each of those elements in some way
+
+Each element gets transformed in some way
+
+
+returns new array
+
+It's super useful - want to capitalize all the strings? Want to do math on each number in an array. 
+
+It's transforming data.
+
+It's often more common to do this using an anonymous function as the parameter rather than passing in the named \function
+
+--------------------------------------
+
+Slide 16
+Filtering
+
+Companion to map
+
+Returns new array
+
+What elements do i want to keep?
+
+The callback function returns a boolean (true or false). If it returns true the element is kept, false the item is tossed
+(like a bouncer at a bar)
+
+
+
+
+
+----------------------------------
+
+Slide 17
+Reducing
+
+
+Aggregation function
+
+Take a bunch of elements and smash it down (sum, medium, average, etc) and return that value.
+
+Take a bunch of things and return a single value.
+
+The aggregation function has 2 aruments, the accumulation, or sum or whatever the final deal will be, and and argument for the individual array items in each iteration.
+
+The reduce() function also takes 2 arguments, but the 2nd is optional. It's the initial value. In my example if I put in 2, then reduce would add all the values in the array plus 2 (the initial total).
+
+Slide 20
+
+Evaluating Teamwork Discussion
+
+What happens when one teammate does (more) more work or less work than the others?
+
+Slide 21
+
+There are 2 things we look at:
+Your github contributions - It's qualitative, not the number of commits. Were there commits. Did you both touch css, html?
+
+How your project mate rated you
+
+Every stage has a survey.
+
+The vast majority get equal grades. 
+
+But you can't freeload.
+
+Yes, what usually instigates this process is from comments that teammates have. When they see that others aren't contributing.
+
+
