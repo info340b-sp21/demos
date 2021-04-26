@@ -1,0 +1,11 @@
+.anim {
+	transition: transform 2s;
+}
+
+.scale-out {
+	transform: scale(0); 
+}
+
+br {
+	size: 100px;
+}

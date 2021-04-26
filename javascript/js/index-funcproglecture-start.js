@@ -36,24 +36,24 @@
 
 //SLIDE 11 - FUNCTIONS ARE OBJECTS
 
-// function sayHello(name) { 
-//     console.log("Hello, "+name);
-//  }
+function sayHello(name) { 
+    console.log("Hello, "+name);
+ }
 
-// function sayGoodbye(name){
-//      console.log("Goodbye, "+name);
-// }
+function sayGoodbye(name){
+     console.log("Goodbye, "+name);
+}
 
 
-//  function doWorld(aFunction) {   //takes ANOTHER FUNCTION as an arg will call the arg function passing it "world"
-//     aFunction("world");
-//  }
+ function doWorld(aFunction) {   //takes ANOTHER FUNCTION as an arg will call the arg function passing it "world"
+    aFunction("world");
+ }
  
 //  doWorld(sayHello); //call function and pass value - prints "Hello world"
  
-//  doWorld(function(msg) {          //pass literal (anonymous value)
-//    console.log("you said: "+msg);
-//  }); //prints "you said: world"
+ doWorld(function(msg) {          //pass literal (anonymous value)
+   console.log("you said: "+msg);
+ }); //prints "you said: world"
 
 
 // //  let thingsToDo = [sayHello, sayHello, sayGoodbye];
