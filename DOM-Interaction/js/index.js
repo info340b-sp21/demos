@@ -1,15 +1,15 @@
 'use strict';
 
-// //slide 5 with a different example from the slide
+//slide 5 with a different example from the slide
 
-// let head1 = document.querySelector('h1');
-// console.log(head1);   //see it's an object
+let head1 = document.querySelector('h1');
+console.log(head1);   //see it's an object
 
-// head1.textContent = 'Hello world!';  //setter
-// console.log(head1.textContent);  
+head1.textContent = 'Hello world!';  //setter
+console.log(head1.textContent);  
 
-// head1.textContent = 'Changed to Hello galaxy!';  //setter
-// console.log(head1.textContent);
+head1.textContent = 'Changed to Hello galaxy!';  //setter
+console.log(head1.textContent);
 
 
 // slide 6 buttons 
@@ -22,41 +22,41 @@ let buttonElem = document.querySelector('#demo-button');
 
 // buttonElem.addEventListener('click', whatToDo);
 
-// // Anonymous function as parameter
+// Anonymous function as parameter
 // buttonElem.addEventListener('click', function() {
 //     console.log("you clicked me!");
 // });
 
-// //Example with event parameter
-// buttonElem.addEventListener('click', function(event) {
-//     console.log(event);
-// });
+//Example with event parameter
+buttonElem.addEventListener('click', function(event) {
+    console.log(event);
+});
 
 // // Example with changing style
 // buttonElem.addEventListener('click', function() {
 //     buttonElem.classList.toggle('btn-success');
 // })
 
-// // Example with altering button text and changing, not toggling
-// buttonElem.addEventListener('click', function() {
-//     buttonElem.classList.add('btn-success');
-//     buttonElem.textContent = "Consider me a changed button";
-// })
+// Example with altering button text and changing, not toggling
+buttonElem.addEventListener('click', function() {
+    buttonElem.classList.add('btn-success');
+    buttonElem.textContent = "Consider me a changed button";
+})
 
 // //slide 14 - adding new element
 
 // //DOM
 
 // part 1, Create a new element in DOM
-// let newP = document.createElement('p')   //example using the DOM create element
-// newP.textContent = "I'm new!"
+let newP = document.createElement('p')   //example using the DOM create element
+newP.textContent = "I'm new!"
 
-// // part 2, we need to add to the DOM
-// // add to the end
-// document.querySelector('#text .card-body').append(newP)
+// part 2, we need to add to the DOM
+// add to the end
+document.querySelector('#text .card-body').append(newP)
 
-// // move it to the start
-// document.querySelector('#text .card-body').prepend("I'm first!")
+// move it to the start
+document.querySelector('#text .card-body').prepend("I'm first!")
 
 
 
@@ -76,7 +76,7 @@ let buttonElem = document.querySelector('#demo-button');
 // }));
  
 
-// Slide 15a
+// // Slide 15a
 
 // let state = {
 //     currentEmotion: "happy"

@@ -1,6 +1,6 @@
 'use strict';
 
-// Slide 8 - (example 1)
+// // Slide 8 - (example 1)
 let theH1 = document.querySelector('h1');
 console.log(theH1);
 
@@ -15,14 +15,16 @@ imgElem.src = 'img/husky.jpg';
 imgElem.alt = "an adult dog";
 
 
-
 //change style - SLIDE 10 (example 3)
 theH1.classList.add('text-success');
+console.log(theH1.classList)
+
 // theH1.classList.add('animated', 'infinite','tada');
+theH1.classList.add('animated',  'tada');
 
 imgElem.classList.add('anim');
 
-// in console add this : imgElem.classList.toggle('scale-out')
+// // in console add this : imgElem.classList.toggle('scale-out')
 
 
 
@@ -52,6 +54,8 @@ function renderCookie() {
 }
 
 renderCookie();
+renderCookie();
+
 
 
 // USE Function to add n number by iterating - SLIDE 12 (example 5 continued)
