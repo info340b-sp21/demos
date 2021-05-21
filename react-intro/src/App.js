@@ -25,7 +25,7 @@ import React from 'react';
 //             <header className="jumbotron">
 //                 <HelloMessage />
 //             </header>
-//             <main> 
+//             <main>
 //                 <p>
 //                     Hi
 //                 </p>
@@ -62,6 +62,7 @@ import React from 'react';
 //                     <Button />
 //                     <Button />
 //                     <Button />
+//                     <Button />
 //                 </p>
 //             </main>
 //         </div>
@@ -81,7 +82,7 @@ import React from 'react';
 
 // function Button(props) {
 //     console.log(props);
-//     let buttontext = props.text;
+//        let buttontext = props.text;
 //     return (
 //       <button className="btn btn-primary rounded-circle">{buttontext}</button>
 //     )

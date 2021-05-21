@@ -16,7 +16,7 @@
 //         // let cardArray = props.messages.map((msgStr) => {
 //         // let card = <Card message={msgStr} />;
 //            let cardArray = props.messages.map((msgStr, idx) => {
-//            let card = <Card message={msgStr} key={idx}/>;
+//            let card = <Card message={msgStr} key={msgStr}/>;
 
 //             return card;
 //         })
@@ -29,5 +29,5 @@
 // }
 
 
-// //         let cardArray = props.messages.map((msgStr, idx) => {
-// //            let card = <Card message={msgStr} key={idx}/>;
+//         let cardArray = props.messages.map((msgStr, idx) => {
+//            let card = <Card message={msgStr} key={idx}/>;

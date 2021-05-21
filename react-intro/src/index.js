@@ -41,12 +41,12 @@ import ReactDOM from 'react-dom';
 // let title = "Hello JSX as a String";
 
 // let header = (
-//    <header className="jumbotron">
-//       <h1>{title}</h1>
-//       <p>{1 + 1}</p>
-//       <p>"hello world".toUpperCase()</p>
-//       <p>{"hello world".toUpperCase()}</p>
-//    </header>
+//     <header className="jumbotron">
+//         <h1>{title}</h1>
+//         <p>{1 + 1}</p>
+//         <p>"hello world".toUpperCase()</p>
+//         <p>{"hello world".toUpperCase()}</p>
+//     </header>
 // );
 // ReactDOM.render(header, document.getElementById('root'));
 
