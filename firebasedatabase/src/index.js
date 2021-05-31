@@ -10,7 +10,7 @@ import './style.css';
 import App from './App';
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
+var firebaseConfig = {
   apiKey: "AIzaSyAZO4P_as180AtluHAR9dR3FrQkGFj9Hns",
   authDomain: "info340b-sp21.firebaseapp.com",
   databaseURL: "https://info340b-sp21-default-rtdb.firebaseio.com",
